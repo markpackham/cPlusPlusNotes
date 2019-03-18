@@ -355,3 +355,127 @@ int main()
         // Change the following line to print the function result:
         std::cout << needs_it_support();
     }
+
+//parameter & argument example
+/*
+Parameters (sometimes called formal parameters) are variables used in a function’s definition. They act as placeholders for the input values you’ll use during your function call.
+the value you pass to the function is called an Argument (also known as an actual parameter)
+*/
+#include <iostream>
+
+    // Define get_emergency_number() below:
+    void get_emergency_number(string emergency_number)
+    {
+
+        std::cout << "Dial " << emergency_number << "\n";
+    }
+
+    int main()
+    {
+
+        // Original emergency services number
+        std::string old_emergency_number = "999";
+
+        // For nicer ambulances, faster response times
+        // and better-looking drivers
+        std::string new_emergency_number = "0118 999 881 999 119 725 3";
+
+        // Call get_emergency_number() below with
+        // the number you want!
+        std::cout << get_emergency_number(new_emergency_number);
+    }
+
+//Multiple parameters
+#include <iostream>
+
+    // Define name_x_times() below:
+    void name_x_times(std::string name, int x)
+    {
+
+        while (x > 0)
+        {
+
+            std::cout << name << "\n";
+            x--;
+        }
+    }
+
+    int main()
+    {
+
+        std::string my_name = "Mark";
+        int some_number = 5; // Change this if you like!
+        // Call name_x_times() below with my_name and some_number
+        name_x_times(my_name, some_number);
+    }
+
+//Scope example (hiding stuff in functions)
+#include <iostream>
+
+    void enter_code(int passcode)
+    {
+
+        if (passcode == 0310)
+        {
+
+            std::string secret_knowledge = "https://s3.amazonaws.com/codecademy-content/courses/regex/onyourexcitingjourneylearningtocodeyouwillfindthis.gif";
+
+            std::cout << secret_knowledge << "\n";
+        }
+        else
+        {
+
+            std::cout << "Sorry, incorrect!\n";
+        }
+    }
+
+    int main()
+    {
+
+        enter_code(0310);
+    }
+
+//Creating header files to hold stuff like functions & inlcude libraries (#include <iostream>) to make main.cpp less bloated
+//main.hpp (header file)
+#include <iostream>
+
+    double to_fahrenheit(int celsius)
+    {
+
+        double fahrenheit = (celsius * 9 / 5) + 32;
+        return fahrenheit;
+    }
+
+    double to_celsius(int fahrenheit)
+    {
+
+        double celsius = (fahrenheit - 32) * 5 / 9;
+        return celsius;
+    }
+
+//main.cpp
+#include "main.hpp"
+
+    int main()
+    {
+
+        std::cout << to_fahrenheit(0) << "\n";
+        std::cout << to_celsius(32) << "\n";
+    }
+
+    /*
+C++ notes
+A function is a named group of statements that do something together.
+Functions allow you to create more flexible, modular, and DRY code.
+C++ has many built-in functions that you can use.
+Functions are called like function_name();
+A function has a declaration with a return type and possible parameters.
+A function has a definition (or body) with a group of statements and a possible return value.
+void functions do not have return values.
+Functions with a return value have return statements.
+Parameters are variables used as placeholders for function input values.
+Arguments are a function’s actual input values.
+Variables defined inside a function have local scope.
+Variables defined with global scope are accessible everywhere in a program.
+Functions are generally stored in a header file.
+*/
