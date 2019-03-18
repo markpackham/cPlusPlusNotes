@@ -316,3 +316,42 @@ int main()
         int the_amazing_random_number = rand() % 8; //anything from 0-7
         std::cout << the_amazing_random_number << "\n";
     }
+
+//function calling, void function
+#include <iostream>
+
+    // Define oscar_wilde_quote() below:
+    void oscar_wilde_quote()
+    {
+
+        std::cout << "The highest, as the lowest, form of criticism is a mode of autobiography.\n";
+    }
+
+    int main()
+    {
+
+        // Call your function here:
+        oscar_wilde_quote();
+    }
+
+//boolean function
+#include <iostream>
+
+    // Change needs_it_support so that it returns support:
+    bool needs_it_support()
+    {
+
+        bool support;
+
+        std::cout << "Hello. IT. Have you tried turning it off and on again? Enter 'true' for yes, 'false' for no.\n";
+        std::cin >> support;
+
+        return support;
+    }
+
+    int main()
+    {
+
+        // Change the following line to print the function result:
+        std::cout << needs_it_support();
+    }
