@@ -479,3 +479,10 @@ Variables defined inside a function have local scope.
 Variables defined with global scope are accessible everywhere in a program.
 Functions are generally stored in a header file.
 */
+
+    /*
+Logical operators are pretty much the same as in JS, PHP & C#
+&&: the and logical operator
+||: the or logical operator
+!: the not logical operator
+ */

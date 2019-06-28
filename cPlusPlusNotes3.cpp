@@ -25,3 +25,22 @@ Class members can be designated as either private or public — they are private
 You can create a constructor to instantiate objects in a particular way.
 A destructor allows you to execute any cleanup necessary before an object gets destroyed.
 */
+
+/*
+Areas to revise
+
+References
+Pass-by-reference
+Pass-by-reference with const
+Memory addresses and how to access them
+Pointers
+Dereferencing a pointer
+nullptr
+
+// Reference
+int &reference = original;
+
+// Pointer
+int* pointer = &original;
+
+ */
